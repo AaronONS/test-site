@@ -53,7 +53,7 @@ data_fields:
 date_formats: []
 disclaimer:
   phase: Mega
-  message:The best to come
+  message: The best to come
   hidden: false
 email_contacts:
   questions: test@example.com

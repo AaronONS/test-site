@@ -3387,7 +3387,7 @@ function updateHeadlineColor(contrast, chartInfo) {
  * @return {String} The headline color in hex form.
  */
 function getHeadlineColor(contrast) {
-    return isHighContrast(contrast) ? '#55a6e5' : '#ffa50a';
+    return isHighContrast(contrast) ? '#55a6e5' : '#55a6e5';
 }
 
 /**
@@ -5188,22 +5188,6 @@ $(function() {
   });
 
   indicatorSearch();
-});
-
-// Add the cookie settings link in the footer.
-$(document).ready(function() {
-if (klaroConfig && klaroConfig.noAutoLoad !== true) {
-  var cookieLink = $('<li class="cookie-settings"><a role="button" tabindex="0">' + translations.cookies.cookie_settings + '</a></li>');
-  $(cookieLink).click(function() {
-    klaro.show();
-  });
-  $(cookieLink).keypress(function(event) {
-    if (event.key === 'Enter') {
-      klaro.show();
-    }
-  });
-  $('#footerLinks ul').append(cookieLink);
-}
 });
 
 /*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js */

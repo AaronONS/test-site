@@ -20,7 +20,7 @@ breadcrumbs:
     - path: /news
       label: menu.updates
 cookie_consent_form:
-  enabled: false
+  enabled: true
 country:
   name: Australia
   adjective: Australian
@@ -52,8 +52,8 @@ data_fields:
   series: ''
 date_formats: []
 disclaimer:
-  phase: ''
-  message: ''
+  phase: Beta
+  message: still working on it
   hidden: false
 email_contacts:
   questions: test@example.com
@@ -106,7 +106,7 @@ goal_image_extension: ''
 goals_page:
   title: general.goals
   description: goal.description
-graph_color_headline: '#004466'
+graph_color_headline: '#ffa50a'
 graph_color_headline_high_contrast: '#55a6e5'
 graph_color_set: accessible
 graph_color_list: []
@@ -146,7 +146,12 @@ languages:
   - es
 languages_public: []
 logos: []
-map_layers: []
+map_layers:
+  - subfolder: ''
+    label: ''
+    min_zoom: 0
+    max_zoom: 0
+    staticBorders: false
 map_options:
   disaggregation_controls: false
   minZoom: 5

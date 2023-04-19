@@ -3101,7 +3101,7 @@ var mapView = function () {
     $('#map').sdgMap({
       indicatorId: indicatorId,
       mapOptions: {"disaggregation_controls":false,"minZoom":5,"maxZoom":10,"tileURL":"","tileOptions":{"id":"","accessToken":"","attribution":""},"colorRange":"chroma.brewer.BuGn","noValueColor":"#f0f0f0","styleNormal":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#888888","dashArray":""},"styleHighlighted":{"weight":1,"opacity":1,"fillOpacity":0.7,"color":"#111111","dashArray":""},"styleStatic":{"weight":2,"opacity":1,"fillOpacity":0,"color":"#172d44","dashArray":"5,5"}},
-      mapLayers: [],
+      mapLayers: [{"subfolder":"","label":"","min_zoom":0,"max_zoom":0,"staticBorders":false}],
       precision: precision,
       precisionItems: precisionItems,
       decimalSeparator: decimalSeparator,
@@ -3387,7 +3387,7 @@ function updateHeadlineColor(contrast, chartInfo) {
  * @return {String} The headline color in hex form.
  */
 function getHeadlineColor(contrast) {
-    return isHighContrast(contrast) ? '#55a6e5' : '#004466';
+    return isHighContrast(contrast) ? '#55a6e5' : '#ffa50a';
 }
 
 /**
@@ -5188,6 +5188,22 @@ $(function() {
   });
 
   indicatorSearch();
+});
+
+// Add the cookie settings link in the footer.
+$(document).ready(function() {
+if (klaroConfig && klaroConfig.noAutoLoad !== true) {
+  var cookieLink = $('<li class="cookie-settings"><a role="button" tabindex="0">' + translations.cookies.cookie_settings + '</a></li>');
+  $(cookieLink).click(function() {
+    klaro.show();
+  });
+  $(cookieLink).keypress(function(event) {
+    if (event.key === 'Enter') {
+      klaro.show();
+    }
+  });
+  $('#footerLinks ul').append(cookieLink);
+}
 });
 
 /*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js */
